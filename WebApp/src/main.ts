@@ -12,7 +12,14 @@ var app: any = angular.module("app", [
     "app.home",
 ]);
 
-createStore(app, {});
+app.config(["initialStateProvider", "localStorageManagerProvider", (initialStateProvider, localStorageManagerProvider) => {
+    var localStorageInitialState = localStorageManagerProvider.get({ name: "initialState" });
+    if (!localStorageInitialState)
+        localStorageManagerProvider.put({
+            name: "initialState", value: {}
+        });
+    initialStateProvider.configure(localStorageManagerProvider.get({ name: "initialState" }));
+}]);
 
 app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => {
     $routeProvider
