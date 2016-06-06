@@ -35,7 +35,7 @@ gulp.task('remove-compiled-js', function () {
 });
 
 gulp.task('clean', function (callback) {
-    //rimraf(paths.lib, callback);
+    rimraf(paths.lib, callback);
 });
 
 gulp.task("webpack", ['remove-compiled-js'], function () {
@@ -68,4 +68,4 @@ gulp.task('watch', function () {
     ], ['remove-compiled-js', 'webpack']);
 });
 
-gulp.task('default', ['remove-compiled-js', 'webpack', 'watch']);
+gulp.task('default', ['remove-compiled-js','libs', 'webpack', 'watch']);

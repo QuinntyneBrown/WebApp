@@ -48,12 +48,12 @@
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	__webpack_require__(31);
-	__webpack_require__(53);
-	__webpack_require__(55);
+	__webpack_require__(52);
+	__webpack_require__(54);
 	var app = angular.module("app", [
 	    "app.core",
 	    "app.routerOutlet",
-	    "app.home"
+	    "app.home",
 	]);
 	core_1.createStore(app, {});
 	app.config(["$routeProvider", function ($routeProvider) {
@@ -890,28 +890,28 @@
 	__webpack_require__(32);
 	__webpack_require__(3);
 	__webpack_require__(2);
-	__webpack_require__(36);
+	__webpack_require__(35);
 	__webpack_require__(27);
-	__webpack_require__(37);
+	__webpack_require__(36);
+	__webpack_require__(38);
 	__webpack_require__(39);
-	__webpack_require__(40);
 	__webpack_require__(26);
+	__webpack_require__(40);
 	__webpack_require__(41);
-	__webpack_require__(42);
 	__webpack_require__(11);
+	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(44);
 	__webpack_require__(30);
+	__webpack_require__(44);
 	__webpack_require__(45);
 	__webpack_require__(46);
 	__webpack_require__(47);
 	__webpack_require__(48);
 	__webpack_require__(49);
 	__webpack_require__(50);
-	__webpack_require__(51);
 	__webpack_require__(12);
 	__webpack_require__(13);
-	__webpack_require__(52);
+	__webpack_require__(51);
 	var coreApp = angular.module("app.core", [
 	    "ngSanitize",
 	    "addOrUpdate",
@@ -947,10 +947,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./core.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(34)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -967,77 +967,8 @@
 	}
 
 /***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(34)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".input-field {\r\n    padding-right:15px;\r\n    padding-left:15px;\r\n    line-height:2em;\r\n    height:30px;\r\n    min-width:200px;\r\n    margin-bottom:15px;\r\n}", ""]);
-
-	// exports
-
-
-/***/ },
+/* 33 */,
 /* 34 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -1289,7 +1220,7 @@
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports) {
 
 	var addOrUpdate = function (options) {
@@ -1309,11 +1240,11 @@
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var _q_1 = __webpack_require__(38);
+	var _q_1 = __webpack_require__(37);
 	/**
 	 * @description Append To Body Asynchrously
 	 * @param options
@@ -1328,7 +1259,7 @@
 
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1336,7 +1267,7 @@
 
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1373,11 +1304,11 @@
 
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var _q_1 = __webpack_require__(38);
+	var _q_1 = __webpack_require__(37);
 	exports.extendCssAsync = function (options) {
 	    return _q_1.$q.when(angular.extend(options.nativeHTMLElement.style, options.cssObject));
 	};
@@ -1385,7 +1316,7 @@
 
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports) {
 
 	angular.module("formEncode", []).value("formEncode", function (data) {
@@ -1398,7 +1329,7 @@
 
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1423,7 +1354,7 @@
 
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1438,7 +1369,7 @@
 
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1463,7 +1394,7 @@
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	angular.module("safeDigest", []).value("safeDigest", function (scope) {
@@ -1473,7 +1404,7 @@
 
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	var originalAngularModule = angular.module;
@@ -1607,7 +1538,7 @@
 
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1623,7 +1554,7 @@
 
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1735,7 +1666,7 @@
 
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1784,11 +1715,11 @@
 
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var _q_1 = __webpack_require__(38);
+	var _q_1 = __webpack_require__(37);
 	exports.setOpacityAsync = function (options) {
 	    var deferred = _q_1.$q.defer();
 	    if (options.nativeHtmlElement) {
@@ -1805,7 +1736,7 @@
 
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(2);
@@ -1830,7 +1761,7 @@
 
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1848,12 +1779,12 @@
 
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	__webpack_require__(31);
-	var router_outlet_component_1 = __webpack_require__(54);
+	var router_outlet_component_1 = __webpack_require__(53);
 	var app = angular.module("app.routerOutlet", [
 	    "app.core"
 	]);
@@ -1861,7 +1792,7 @@
 
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1891,12 +1822,12 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	__webpack_require__(31);
-	var home_container_component_1 = __webpack_require__(56);
+	var home_container_component_1 = __webpack_require__(55);
 	var app = angular.module("app.home", [
 	    "app.core"
 	]);
@@ -1904,7 +1835,7 @@
 
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1923,8 +1854,8 @@
 	    }
 	    HomeContainerComponent = __decorate([
 	        core_1.Component({
-	            template: __webpack_require__(57),
-	            styles: [__webpack_require__(58)],
+	            template: __webpack_require__(56),
+	            styles: [__webpack_require__(57)],
 	            selector: "home-container",
 	            changeDetection: core_1.ChangeDetectionStrategy.OnPush
 	        }), 
@@ -1936,22 +1867,22 @@
 
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\r\n    <h1>Web App</h1>\r\n</div>"
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(59);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./home-container.component.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(34)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1966,20 +1897,6 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(34)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\r\n}\r\n", ""]);
-
-	// exports
-
 
 /***/ }
 /******/ ]);

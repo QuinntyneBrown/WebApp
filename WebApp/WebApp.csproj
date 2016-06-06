@@ -79,7 +79,6 @@
     <Content Include="lib\angular.js" />
     <Content Include="lib\jquery.js" />
     <Content Include="lib\rx.all.compat.js" />
-    <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="src\app\core\core.css" />
     <Content Include="src\app\home\home-container.component.css">

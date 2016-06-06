@@ -9,7 +9,7 @@ require("./app/home/home.module");
 var app: any = angular.module("app", [
     "app.core",
     "app.routerOutlet",
-    "app.home"
+    "app.home",
 ]);
 
 createStore(app, {});
