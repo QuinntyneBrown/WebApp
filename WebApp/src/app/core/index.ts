@@ -1,4 +1,5 @@
 ﻿export * from "./store";
+export * from "./create-store";
 export * from "./action-creator";
 export * from "./service";
 export * from "./pluck-out";
